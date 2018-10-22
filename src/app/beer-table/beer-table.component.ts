@@ -12,8 +12,9 @@ export class BeerTableComponent implements OnInit, OnDestroy {
   beerListSubs: Subscription;
   beerList: Beer[];
   beerColumnsSubs: Subscription;
-  beerColumns: Array<string>;
-  
+  beerColumns: Array<string> = ['beer_name', 'beer_type', 'ibu', 'abv']
+  loading: boolean;
+
   constructor(private beersApi: BeersApiService) {
 	  
   }
@@ -26,9 +27,8 @@ export class BeerTableComponent implements OnInit, OnDestroy {
     },
     console.error,
     );
-    this.beerColumns = ['id', 'beer_name', 'beer_type'];
   }
   ngOnDestroy() {
-	  this.beerListSubs.unsubscribe();
+    this.beerListSubs.unsubscribe();
   }
 }
