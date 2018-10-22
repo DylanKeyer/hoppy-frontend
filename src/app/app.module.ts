@@ -1,17 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { BeerApiService } from './beers/beers-api-service';
+import { BeersApiService } from './beers/beers-api.service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BeerTableRowComponent } from './beer-table-row/beer-table-row.component';
+import { BeerTableComponent } from './beer-table/beer-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    BeerTableRowComponent,
+    BeerTableComponent
   ],
   imports: [
     BrowserModule,
-	HttpClientModule
+    AppRoutingModule,
+	  HttpClientModule
   ],
   providers: [BeersApiService],
   bootstrap: [AppComponent]

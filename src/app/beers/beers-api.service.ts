@@ -15,10 +15,14 @@ export class BeersApiService {
 	private static _handleError(err: HttpErrorResponse | any) {
 		return Observable.throw(err.message || 'Error: Unable to complete request.');
 	}
+
+	getBeerColumns(): Array<string> {
+		return Object.getOwnPropertyNames(Beer);
+	}
 	
 	getBeers(): Observable<any> {
 		return this.http
-			.get('${API_URL/beers')
+			.get('http://localhost:5000/beers')
 			.catch(BeersApiService._handleError);
 	}
 }

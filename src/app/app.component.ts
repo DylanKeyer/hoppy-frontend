@@ -12,6 +12,8 @@ export class AppComponent implements OnInit, OnDestroy {
   title = 'app';
   beerListSubs: Subscription;
   beerList: Beer[];
+  beerColumnsSubs: Subscription;
+  beerColumns: Array<string>;
   
   constructor(private beersApi: BeersApiService) {
 	  
@@ -22,9 +24,11 @@ export class AppComponent implements OnInit, OnDestroy {
 		.getBeers()
 		.subscribe(res => {
 			this.beerList = res;
-		},
-		console.error
-		);
+    },
+    console.error,
+    );
+    this.beerColumns = this.beersApi
+    .getBeerColumns();
   }
   ngOnDestroy() {
 	  this.beerListSubs.unsubscribe();
