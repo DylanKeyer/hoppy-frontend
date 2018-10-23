@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { BeersApiService } from './beers/beers-api.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BeerTableComponent } from './beer-table/beer-table.component';
+import { BeerCardComponent } from './beer-card/beer-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    BeerTableComponent
+    BeerTableComponent,
+    BeerCardComponent
   ],
   imports: [
     BrowserModule,

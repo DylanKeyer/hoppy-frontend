@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <ng-container *ngFor="let beer of beerList">
+        <div class="col-sm-4">
+          <div class="card">
+              <img class="card-img-top" src="static/images/ipa.png" alt="Card image cap" style="width:50%">
+              <div class="card-body">
+                <h5 class="card-title">{{beer.beer_name}}</h5>
+                <p class="card-text">{{beer.description}}</p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+              

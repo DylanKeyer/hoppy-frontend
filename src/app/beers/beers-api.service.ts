@@ -22,7 +22,7 @@ export class BeersApiService {
 	
 	getBeers(): Observable<any> {
 		return this.http
-			.get('http://localhost:5000/beers')
+			.get('http://localhost:5000/api/beer')
 			.catch(BeersApiService._handleError);
 	}
 }
