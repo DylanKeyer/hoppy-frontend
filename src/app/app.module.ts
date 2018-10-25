@@ -8,13 +8,15 @@ import { BeersApiService } from './beers/beers-api.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BeerTableComponent } from './beer-table/beer-table.component';
 import { BeerCardComponent } from './beer-card/beer-card.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     BeerTableComponent,
-    BeerCardComponent
+    BeerCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
